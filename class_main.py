@@ -17,9 +17,9 @@ class class_main:
     def proxies_checker(self, proxy, r=0):
         try:
             res = requests.get(
-                'https://httpbin.org/ip',
+                'http://httpbin.org/ip',
                 proxies=proxy,
-                timeout=5
+                timeout=10
             )
             if res.status_code == "200" or res.status_code == 200: return {"response_time": res.elapsed.total_seconds()}
         except Exception as e:
