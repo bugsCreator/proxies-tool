@@ -164,21 +164,18 @@ def git_jetkai():
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 def run():
-    print("run")
     multiprocessing.Process(target=git_jetkai).start()
     multiprocessing.Process(target=proxyscrape).start()
     multiprocessing.Process(target=proxy_cz()).start()
 
 
 def run2():
-    print("run2")
     for i in range(0, 10):
         multiprocessing.Process(target=freeproxy).start()
         multiprocessing.Process(target=proxyscan).start()
 
 
 def run3():
-    print("run3")
     multiprocessing.Process(target=free_proxy_list).start()
     multiprocessing.Process(target=sslproxies).start()
     multiprocessing.Process(target=us_proxy).start()
@@ -189,8 +186,5 @@ if __name__ == '__main__':
     multiprocessing.Process(target=run).start()
     multiprocessing.Process(target=run2()).start()
     multiprocessing.Process(target=run3()).start()
-    # run()
-    # run2()
-    # run3()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
